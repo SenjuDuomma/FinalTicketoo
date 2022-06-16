@@ -7,6 +7,8 @@ if (isset($_GET['submit'])) {
     $end_date = $_GET['end_date'];
     $price = $_GET['price'];
     $cover_img = $_GET['poster'];
+    $status = $_GET['status'];
+
 
     require_once '../includes/dbh.inc.php';
     require_once 'inc/function.admin.php';
@@ -18,12 +20,12 @@ if (isset($_GET['submit'])) {
     echo "price = ". $price."<br>";
     echo "cover img = ". $cover_img."    ";
     //echo '<img src="../img/"'.$cover_img. '>';*/
-    if (emptyFields($title, $duration, $date_showing, $end_date, $price, $cover_img) !== false) {
-        header("location:../movie_fillup.php?error=emptyfields");
+    if (emptyFields($title, $duration, $date_showing, $end_date, $price, $cover_img, $status) !== false) {
+        header("location:movie_fillup.php?error=emptyfields");
         exit();
     }
 
-    addMovie($title, $duration, $date_showing, $end_date, $price, $cover_img, $conn);
+    addMovie($title, $duration, $date_showing, $end_date, $price, $cover_img, $status, $conn);
 
 
 }

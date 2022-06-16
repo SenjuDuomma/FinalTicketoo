@@ -42,7 +42,7 @@
                             Duration: <?php echo $row['duration']?><br>
                             Date Showing: <?php echo $row['date_showing']?><br>
                             End Date: <?php echo $row['end_date']?><br>
-                            Ticket Price: <?php echo $row['price']?><br>
+                            Price: <?php echo $row['price']?><br>
                         </p>
                         <button class="movie-list-item-button" type="submit" name="movie_id" value="<?php echo $row['movieID']?>">Reserve</button></form>
                     </div>

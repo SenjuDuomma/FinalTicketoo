@@ -31,6 +31,13 @@
 
                 <label for="end_date">End date:</label>
                 <input type="date" id="end_date" name="end_date" value="" placeholder=""><br><br>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Showing">Showing</option>
+                    <option value="Ended">Ended</option>
+                </select><br><br>
                 
                 <label for="price">Price:</label>
                 <input type="text" id="price" name="price" value="" placeholder="Price"><br><br>

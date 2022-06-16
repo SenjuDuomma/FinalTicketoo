@@ -18,9 +18,9 @@
         <div class="ticket-left">
             <div class="ticket-image" style="background: url('img/ticket-img.jpg'); height: 250px; width: 250px; background-size: contain; opacity: 0.85;">
                 <p class="admit-one">
-                    <span>ADMIT ONE</span>
-                    <span>ADMIT ONE</span>
-                    <span>ADMIT ONE</span>
+                    <span>ADMIT </span>
+                    <span>ADMIT </span>
+                    <span>ADMIT </span>
                 </p>
                 <div class="ticket-number">
                     <p>
@@ -52,9 +52,9 @@
         </div>
         <div class="ticket-right">
             <p class="admit-one">
-                <span>ADMIT ONE</span>
-                <span>ADMIT ONE</span>
-                <span>ADMIT ONE</span>
+                <span>ADMIT </span>
+                <span>ADMIT </span>
+                <span>ADMIT </span>
             </p>
             <div class="right-info-container">
                 <div class="show-name">

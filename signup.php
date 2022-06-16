@@ -6,11 +6,11 @@
         <h2>Sign Up</h2>
         <div class="signupform-form">
             <form action="includes/signup.inc.php" method="POST">
-                <input type="text" name="name" placeholder="Fullname..."><br><br>
-                <input type="text" name="email" placeholder="Email..."><br><br>
-                <input type="text" name="uid" placeholder="Username..."><br><br>
-                <input type="password" name="pwd" placeholder="Password..."><br><br>
-                <input type="password" name="pwdrepeat" placeholder="Repeat Password..."><br><br>
+                <input type="text" name="name" placeholder="Fullname..."><br>
+                <input type="text" name="email" placeholder="Email..."><br>
+                <input type="text" name="uid" placeholder="Username..."><br>
+                <input type="password" name="pwd" placeholder="Password..."><br>
+                <input type="password" name="pwdrepeat" placeholder="Repeat Password..."><br>
                 <button type="submit" name="submit">Sign-up</button><br><br>
             </form>
         </div>
@@ -23,7 +23,7 @@
             echo "<p>Choose a proper username!</p>";
         }
         elseif ($_GET["error"] == "invalidemail") {
-            echo "<p>Choose a proper email!</p>";
+            echo "<p>Incorrect email format!</p>";
         }
         elseif ($_GET["error"] == "unmatchedpassword") {
             echo "<p>Passwords doesn't match!</p>";
@@ -32,7 +32,7 @@
             echo "<p>Something went wrong, try again!</p>";
         }
         elseif ($_GET["error"] == "usernametaken") {
-            echo "<p>Username already taken, try again!</p>";
+            echo "<p>Username/Email already taken, try again!</p>";
         }
         elseif ($_GET["error"] == "none") {
             echo "<p>You have signed up!</p>";?>

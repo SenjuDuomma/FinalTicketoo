@@ -6,6 +6,9 @@ CREATE TABLE users (
     usersPwd varchar(128)  NOT NULL
 );
 
+INSERT INTO `users` (`usersName`, `usersEmail`, `usersUid`, `usersPwd`) VALUES
+('Admin', 'admin@gmail.com', 'Admin', 'Admin123');
+
 CREATE TABLE `movies` (
   `movieID` int(30) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `title` text NOT NULL,
@@ -15,7 +18,8 @@ CREATE TABLE `movies` (
   `end_date` date NOT NULL,
   `trailer_yt_link` text NOT NULL,
   `price` int(255) NOT NULL,
-  `genreID` varchar(150)  NOT NULL
+  `genreID` varchar(150)  NOT NULL,
+  `status_info` varchar(150)  NOT NULL
 );
 
 INSERT INTO `movies` (`title`, `cover_img`, `duration`, `date_showing`, `end_date`, `trailer_yt_link`, `price`, `genreID`) VALUES

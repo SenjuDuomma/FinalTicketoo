@@ -105,6 +105,18 @@ function creatUser($conn, $name, $email, $username, $pwd){
     return $result;
 }
 
+function notAdmin($username){
+    $result;
+
+    if ($username !== 'Admin'){
+        $result = false;
+    }
+    else {
+        $result = true;
+    }
+    return $result;
+}
+
 function loginUser($conn, $username, $pwd){
     $uidExists = uidExists($conn, $username, $username);
     //$userRows = $conn->query("SELECT user_name from (SELECT u_name AS user_nameFROM   users) WHERE  u_name = ".$username)
@@ -128,6 +140,35 @@ function loginUser($conn, $username, $pwd){
         $_SESSION["userFullName"] = $uidExists["usersName"];
         $_SESSION["useremail"] = $uidExists["usersEmail"];
         header("location:../index.php?id=".$_SESSION['userid']);
+        exit();
+    }
+
+
+}
+
+function loginAdmin($conn, $username, $pwd){
+    $uidExists = uidExists($conn, $username, $username);
+    //$userRows = $conn->query("SELECT user_name from (SELECT u_name AS user_nameFROM   users) WHERE  u_name = ".$username)
+
+    if ( $uidExists === false) {
+        header("location:../admin/login.admin.php?error=wronglogin");
+        exit();
+    }
+
+    $pwdHashed = $uidExists["usersPwd"];
+    $checkPwd = password_verify($pwd, $pwdHashed);
+
+    if ($checkPwd === false) {
+        header("location:../admin/login.admin.php?error=wronglogin");
+        exit();
+    }
+    elseif ($checkPwd === true) {
+        session_start();
+        $_SESSION["userid"] = $uidExists["usersID"];
+        $_SESSION["useruid"] = $uidExists["usersUid"];
+        $_SESSION["userFullName"] = $uidExists["usersName"];
+        $_SESSION["useremail"] = $uidExists["usersEmail"];
+        header("location:../admin/index.php?id=".$_SESSION['userid']);
         exit();
     }
 

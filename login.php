@@ -19,7 +19,7 @@
             echo "<p>Fill in all fields!</p>";
         }
         elseif ($_GET["error"] == "wronglogin") {
-            echo "<p>Incorrect inputs!</p>";
+            echo "<p>Incorrect username/password!</p>";
         }
     }
     ?>   

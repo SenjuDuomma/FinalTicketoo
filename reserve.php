@@ -38,9 +38,10 @@
                             <!-- <label for="time">Time:</label> -->
                             <select id="time" name="time">
                                 <option value = "time-select">Select Time</option>
-                                <option value="09:00:00">09:00:00 AM</option>
+                                <option value="10:00:00">10:00:00 AM</option>
                                 <option value="01:00:00">01:00:00 PM</option>
                                 <option value="03:00:00">03:00:00 PM</option>
+                                <option value="05:00:00">05:00:00 PM</option>
                             </select>
                         </div>
 
@@ -50,6 +51,7 @@
                         </div>
 
                         <div class = "form-row">
+                            <h5>Date:</h5>
                             <input type="date" id="date" name="date" min="<?php echo $movie['date_showing']?>" max="<?php echo $movie['end_date']?>">
                             <input type = "reset">
                         </div>

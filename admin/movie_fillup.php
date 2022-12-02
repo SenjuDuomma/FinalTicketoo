@@ -13,23 +13,23 @@
       <td>
         <div class="movie_details">
             <form action="add.movie.php" method="get" >
-                <label for="poster">Poster:</label>
+                <label for="poster">Poster</label><br>
                 <input type="text" id="poster" name="poster" 
                     value="<?php if (isset($_GET["error"])) {
                     if ($_GET["error"] == "none") {
                         echo $_GET['filename'];}}?>" placeholder="upload image first"><br><br>
 
 
-                <label for="title">Title:</label>
+                <label for="title">Title</label><br>
                 <input type="text" id="title" name="title" value="" placeholder="Title"><br><br>
 
-                <label for="duration">Duration (hrs):</label>
+                <label for="duration">Duration (hrs):</label><br>
                 <input type="text" id="duration" name="duration" value="" placeholder="e.g 2.5"><br><br>
 
-                <label for="date_showing">Date showing:</label>
+                <label for="date_showing">Date showing:</label><br>
                 <input type="date" id="date_showing" name="date_showing" value="" placeholder=""><br><br>
 
-                <label for="end_date">End date:</label>
+                <label for="end_date">End date:</label><br>
                 <input type="date" id="end_date" name="end_date" value="" placeholder=""><br><br>
 
                 <label for="status">Status:</label>
@@ -39,7 +39,7 @@
                     <option value="Ended">Ended</option>
                 </select><br><br>
                 
-                <label for="price">Price:</label>
+                <label for="price">Price</label><br>
                 <input type="text" id="price" name="price" value="" placeholder="Price"><br><br>
 
                 <button type="submit" name="submit">Add Movie</button>
